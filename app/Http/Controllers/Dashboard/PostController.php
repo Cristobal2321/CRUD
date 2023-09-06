@@ -3,16 +3,11 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+
 use App\Http\Requests\Post\PutRequest;
 use App\Http\Requests\Post\StoreRequest;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Str;
-
-
-use App\Models\Post;
 use App\Models\Category;
-use Illuminate\Http\Request;
-use views\dashboard\post\create;
+use App\Models\Post;
 
 class PostController extends Controller
 {

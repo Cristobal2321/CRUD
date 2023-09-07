@@ -1,9 +1,7 @@
 <?php
 
-use App\Http\Controllers\Dashboard\CategoryController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Dashboard\PostController;
-use Illuminate\Foundation\Console\RouteListCommand;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,15 +18,25 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('post', PostController::class);
-Route::resource('category', CategoryController::class);
 
 
-// Route::get('post', [PostController::class,'index']);
-// Route::get('post/{post}', [PostController::class,'show']);
-// Route::get('post/create', [PostController::class,'create']);
-// Route::get('post/{post}/edit', [PostController::class,'edit']);
 
-// Route::post('post', [PostController::class,'store']);
-// Route::pust('post/{post}', [PostController::class,'update']);
-// Route::pust('post/{post}', [PostController::class,'delete']);
+
+Route::group(['prefix' => 'dashboard','middleware' =>'auth'], function (){
+    Route::get('/', function () {
+        return view('dashboard');
+    })->name("dashboard");
+    Route::resources([
+        'post'=> App\Http\Controllers\Dashboard\PostController::class,
+        'category'=>App\Http\Controllers\Dashboard\CategoryController::class,
+    ]); 
+
+});
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+require __DIR__.'/auth.php';

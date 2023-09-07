@@ -33,7 +33,8 @@
 
         <div class="container">
             <div class="card card-white mt-7">
-            @yield('content')
+
+                @yield('content')
             </div>
         </div>
     </div>

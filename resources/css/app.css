@@ -19,7 +19,7 @@ h1{
 
 
 .table th{
-    @apply px-6 py-2 bg-gray-800 font-medium text-white uppercase border leading-4 tracking-widest 
+    @apply px-6 py-2 bg-white font-medium text-red-600 uppercase border leading-4 tracking-widest 
 }
 
 .table tr{
@@ -34,13 +34,14 @@ h1{
 /****************************FORMULARIO******************************/
 
 .form-control{
-    @apply block rounded-sm shadow-sm bg-blue-950 w-full
+    @apply block rounded-sm shadow-sm bg-white w-full
 }
 
 label{
     @apply mt-3 block text-gray-400
 
 }
+
 
 /***************************************************************/
 
@@ -75,7 +76,7 @@ label{
     @apply p-6 rounded shadow-sm
 }
 .card-white{
-    @apply bg-slate-800
+    @apply bg-red-600
 }
 
 

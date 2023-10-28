@@ -13,14 +13,14 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
 
-class RegisteredUserController extends Controller
+class RegistrarController extends Controller
 {
     /**
      * Display the registration view.
      */
     public function create(): View
     {
-        return view('auth.register');
+        return view('auth.registro');
     }
 
     /**
@@ -31,13 +31,13 @@ class RegisteredUserController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
+            'email' => ['required', 'string', 'max:255', 'unique:'.User::class,'regex:/[0-9]/'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'rol' => ['required', 'string'],
         ]);
 
         $user = User::create([
-            'name' => $request->name,
+       
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);

@@ -49,3 +49,4 @@ class RegistrarController extends Controller
         return redirect(RouteServiceProvider::HOME);
     }
 }
+

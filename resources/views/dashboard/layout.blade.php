@@ -24,8 +24,12 @@
 
         <header class="bg-white dark:bg-red-600 shadow">
             <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                <div class="relative rounded-md shadow-sm">
+                    <input type="text" class="block w-full p-2 border rounded-md text-sm focus:outline-none focus:ring focus:ring-opacity-50" placeholder="Buscar...">
+                </div>
             </div>
         </header>
+
 
         @if (session('status'))
             {{ session('status') }}

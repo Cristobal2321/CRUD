@@ -5,7 +5,7 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('post.index') }}">
+                    <a href="{{ route('beneficiario.index') }}">
                         <x-application-logo class="block h-6 w-auto fill-current text-white dark:text-gray-200" />
                     </a>
                 </div>
@@ -13,16 +13,20 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
  
-                    <x-nav-link :href="route('post.index')" :active="request()->routeIs('post.index')">
+                    <x-nav-link :href="route('beneficiario.index')" :active="request()->routeIs('beneficiario.index')">
                         {{ __("Beneficiarios") }}
                     </x-nav-link>
 
                     <x-nav-link :href="route('category.index')" :active="request()->routeIs('category.index')">
-                        {{ __("Apoyos") }}
+                        {{ __("Recursos") }}
                     </x-nav-link>
                     
                     <x-nav-link :href="route('registro')" :active="request()->routeIs('registro')">
-                        {{ __("Registrarse") }}
+                        {{ __("Usuarios") }}
+                    </x-nav-link>
+
+                    <x-nav-link :href="route('registro')" :active="request()->routeIs('registro')">
+                        {{ __("asociacion") }}
                     </x-nav-link>
                       
                     </div>

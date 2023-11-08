@@ -4,41 +4,74 @@
 
 /***************base*************/
 h1{
-    @apply text-4xl text-white mb-3
+    @apply text-3xl text-black mb-3 font-bold font-serif
+}
+
+h2{
+    @apply text-xs text-white mb-3
+}
+
+#a1{
+    @apply text-xs text-black  mb-3 text-right
+}
+
+h4{
+    @apply text-sm text-black mb-3
+}
+
+h5{
+    @apply text-lg text-gray-800 text-center font-bold shadow-lg border-red-500 mb-3 p-2
 }
 
 
+h3{
+    @apply text-2xl text-black mb-3
+}
+
+#nombre{
+    @apply shadow-black border-red-950 
+
+}
+
 /*********************************/
 
-
+.form-control.custom-input {
+    width: 50%; /* Puedes ajustar este valor según tu preferencia */
+}
 
 /*********** TABLA BASICA********** */
 .table {
-    @apply table-fixed w-full
+    @apply table-fixed w-full border-red-700
+
 }
 
 
 .table th{
-    @apply px-6 py-2 bg-white font-medium text-red-600 uppercase border leading-4 tracking-widest 
+    @apply px-6 py-2 bg-gray-200 font-medium text-red-600 uppercase border leading-4 tracking-widest   border-black
 }
 
 .table tr{
-    @apply border  text-gray-300
+    @apply border  text-black bg-gray-300 border-black
 }
 
+
+
 .table td{
-    @apply px-6 py-4 whitespace-normal
+    @apply px-6 py-4 whitespace-normal border-black
 }
 /**************************************************************** */
 
 /****************************FORMULARIO******************************/
 
 .form-control{
-    @apply block rounded-sm shadow-sm bg-white w-full
+    @apply block rounded-sm shadow-sm bg-white w-full mb-0
 }
 
+
+
+
 label{
-    @apply mt-3 block text-gray-400
+    @apply mt-3 block text-black
 
 }
 
@@ -73,11 +106,29 @@ label{
 /**************************card**************************/
 
 .card{
-    @apply p-6 rounded shadow-sm
+    @apply p-10 rounded shadow-sm pt-3
 }
 .card-white{
-    @apply bg-red-600
+    @apply bg-red-600  
 }
+
+.card-create{
+    @apply bg-gray-100 w-11/12 mx-auto
+}
+
+.card-create2{
+    @apply bg-gray-100 w-11/12 mx-auto
+}
+
+.card-Tabla{
+    @apply bg-gray-100 w-full mx-auto
+}
+
+
+.card-show{
+    @apply bg-gray-200 w-11/12 mx-auto
+}
+
 
 
 
